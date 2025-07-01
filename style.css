@@ -2,6 +2,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* outline: 1px solid red; */
 }
 
 html {
@@ -31,7 +33,7 @@ body {
     background-color: var(--branco);
 
     & .interface {
-        max-width: 128rem;
+        max-width: 1280px;
         margin: 0 auto;
         width: 100%;
         padding: 0 1rem;
@@ -43,9 +45,9 @@ body {
         display: flex;
         position: fixed;
         width: 100%;
+        height: 7rem;
         justify-content: space-between;
         align-items: center;
-        height: 7rem;
         background-color: rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(8px);
 
@@ -96,21 +98,20 @@ body {
 
     }
 
-    /* Header */
-
     /* Main */
 
     & main {
 
         /* Hero */
 
-        & .section-hero {
+        & #hero {
             width: 100%;
+            padding-top: 7rem;
             height: 100dvh;
             background-image: url(teste.jpg);
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: center center;
+            background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -119,7 +120,7 @@ body {
                 display: flex;
                 justify-content: left;
                 flex-direction: column;
-                gap: 3rem;
+                gap: 2rem;
 
 
                 & .internet {
@@ -137,7 +138,8 @@ body {
 
                 & h1 {
                     color: var(--fonte-branco);
-                    font-size: 8rem;
+                    font-size: 7rem;
+                    line-height: .8;
 
                     & span {
                         color: blue;
@@ -186,7 +188,7 @@ body {
                         color: var(--fonte-branco);
                         background-color: rgb(100, 175, 100);
                         border: 1px solid transparent;
-                        padding: 1.5rem 2rem;
+                        padding: 1rem 2rem;
                         font-size: 2rem;
                         text-decoration: none;
                     }
@@ -200,7 +202,7 @@ body {
                         color: var(--fonte-branco);
                         background-color: var(--branco-transparente);
                         border: 1px solid var(--branco);
-                        padding: 1.5rem 2rem;
+                        padding: 1rem 2rem;
                         font-size: 2rem;
                         text-decoration: none;
                     }
@@ -208,13 +210,10 @@ body {
             }
         }
 
-        /* Hero */
-
         /* Planos */
 
-        & .section-planos {
+        & #planos {
             width: 100%;
-            height: 100dvh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -239,21 +238,19 @@ body {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr);
                     width: 100%;
-                    height: 60%;
                     gap: 3rem;
 
                     & article {
                         background-color: white;
-                        height: 30rem;
                         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.322);
                         border-radius: 2rem;
-                        /* overflow: hidden; */
                         transition: 0.1s linear;
-
 
                         & .preco {
                             background-color: var(--azul-claro);
                             padding: 1.5rem;
+                            border-radius: 2rem 2rem 0 0;
+                            height: 25%;
 
                             & p {
                                 font-size: 1.5rem;
@@ -262,12 +259,17 @@ body {
                         }
 
                         & .beneficios {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 1rem;
+                            justify-content: space-between;
                             padding: 1.5rem;
+                            height: 75%;
 
                             & .info {
                                 display: flex;
                                 justify-content: center;
-                                align-items: start;
+                                align-items: flex-start;
                                 flex-direction: column;
                                 gap: 1rem;
 
@@ -291,24 +293,13 @@ body {
                                 width: 100%;
                                 text-decoration: none;
                                 color: white;
+                                text-align: center;
                                 font-size: 1.8rem;
                             }
                         }
 
                         &:hover {
                             transform: scale(1.03);
-                        }
-
-                        &::before {
-                            content: "Texto";
-                            position: absolute;
-                            top: -1rem;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            background: #087CA7;
-                            padding: 0.5rem 1rem;
-                            border-radius: 1rem;
-                            color: white;
                         }
                     }
 
@@ -350,10 +341,5 @@ body {
 
             }
         }
-
-        /* Planos */
-
     }
-
-    /* Main */
 }
