@@ -217,6 +217,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 5rem 0rem;
 
             & .interface {
                 display: flex;
@@ -239,22 +240,54 @@ body {
                     grid-template-columns: repeat(3, 1fr);
                     width: 100%;
                     gap: 3rem;
+                    margin-top: 2rem;
+                    margin-bottom: 2rem;
 
                     & article {
                         background-color: white;
                         box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.322);
                         border-radius: 2rem;
                         transition: 0.1s linear;
+                        height: 45rem;
 
                         & .preco {
                             background-color: var(--azul-claro);
-                            padding: 1.5rem;
+                            padding: 2rem;
                             border-radius: 2rem 2rem 0 0;
                             height: 25%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-direction: column;
 
-                            & p {
-                                font-size: 1.5rem;
+                            & .plano {
+                                font-size: 1.7rem;
                                 color: white;
+                                font-weight: bold;
+                                width: 100%;
+                                text-align: center;
+                            }
+
+                            & .preco {
+                                font-size: 1.7rem;
+                                color: white;
+                                font-weight: bold;
+                                width: 100%;
+                                text-align: center;
+
+                                & span {
+                                    font-weight: normal;
+                                }
+                            }
+
+                            & .mega {
+                                font-size: 1.7rem;
+                                color: white;
+                                font-weight: bold;
+                                width: 100%;
+                                text-align: center;
+
+
                             }
                         }
 
@@ -295,18 +328,25 @@ body {
                                 color: white;
                                 text-align: center;
                                 font-size: 1.8rem;
+                                transition: 0.1s linear;
+
+                                &:hover {
+                                    transform: scale(1.03);
+                                    background-color: rgb(63, 161, 63);
+                                }
                             }
                         }
 
                         &:hover {
-                            transform: scale(1.03);
+                            transform: scale(1.04);
                         }
                     }
 
                     & .popular {
-                        transform: scale(1.02);
+                        transform: scale(1.03);
 
                         & .preco {
+                            padding-top: 3rem;
 
                             & .popular {
                                 position: fixed;
@@ -333,10 +373,17 @@ body {
                 & .btn-falar {
                     background-color: rgb(82, 213, 82);
                     border-radius: 1rem;
-                    padding: 1.5rem 5rem;
+                    padding: 1.5rem 6rem;
                     text-decoration: none;
                     color: white;
+                    text-align: center;
                     font-size: 1.8rem;
+                    transition: 0.1s linear;
+
+                    &:hover {
+                        transform: scale(1.03);
+                        background-color: rgb(63, 161, 63);
+                    }
                 }
 
             }
