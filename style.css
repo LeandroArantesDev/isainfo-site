@@ -23,7 +23,7 @@ html {
     --cinza: #A49694;
     --azul-escuro: #011936;
     --azul-escuro-transparente: #0119366a;
-    --azul-claro: #087CA7;
+    --azul-claro: #579AF7;
     --azul-claro-transparente: #087da737;
     --azul-ciano: #05B2DC;
     /* Paleta de cores */
@@ -32,6 +32,8 @@ html {
     --fonte-branco: #ffffff;
     --fonte-azul-claro: #087CA7;
     /* Cores de fontes */
+
+    --verde-zap: rgb(100, 175, 100);
 
 }
 
@@ -48,6 +50,40 @@ body {
 
 section {
     scroll-margin-top: 7rem;
+}
+
+#btn-zap {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    right: 2rem;
+    bottom: 2rem;
+    font-size: 3rem;
+    color: var(--branco);
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    background-color: var(--verde-zap);
+    animation: balancar .8s infinite;
+    border: .5rem solid var(--branco);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 700;
+}
+
+@keyframes balancar {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(-20deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
 }
 
 .titulo {
@@ -91,17 +127,52 @@ header {
             justify-self: center;
             gap: 1rem;
 
+            & a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: .5rem;
+                padding-bottom: .2rem;
+                text-decoration: none;
+                color: var(--branco);
+                font-size: 1.5rem;
+                position: relative;
+
+                &::after,
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    transform: translate(-50% -50%);
+                    background-color: var(--branco);
+                    height: .1rem;
+                    width: 0%;
+                    transition: .3s ease all;
+                }
+
+                &::after {
+                    left: 50%;
+                }
+
+                &::before {
+                    right: 50%;
+                }
+
+                &:hover::after,
+                &:hover::before {
+                    width: 50%;
+                }
+            }
+
             & .whats,
             .boleto {
-                text-decoration: none;
-                color: var(--fonte-branco);
                 padding: 1rem 2rem;
                 border-radius: 1rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 0.5rem;
-                font-size: 1.5rem;
+
+                &::after,
+                &::before {
+                    display: none;
+                }
 
                 &:hover {
                     transform: scale(1.05);
@@ -109,7 +180,7 @@ header {
             }
 
             & .whats {
-                background-color: rgb(100, 175, 100);
+                background-color: var(--verde-zap);
             }
 
             & .boleto {
@@ -118,6 +189,7 @@ header {
         }
     }
 }
+
 
 /* Hero */
 
@@ -139,12 +211,13 @@ header {
 
 
         & .internet {
-            color: var(--fonte-branco);
             padding: 0.5rem 1.5rem;
             border-radius: 2rem;
             display: flex;
             align-items: center;
             gap: 1rem;
+            color: var(--azul-claro);
+            font-weight: bold;
             background-color: var(--azul-claro-transparente);
             backdrop-filter: blur(2px);
             width: max-content;
@@ -237,7 +310,7 @@ header {
         background-image: url('img/img-hero.jpg');
         background-size: cover;
         background-position: center;
-        filter: brightness(.5);
+        filter: brightness(.4);
         z-index: -1;
     }
 
@@ -295,7 +368,6 @@ header {
                 background-color: white;
                 box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.322);
                 border-radius: 2rem;
-                transition: 0.1s linear;
                 height: 45rem;
 
                 & .preco {
@@ -376,7 +448,6 @@ header {
                         color: white;
                         text-align: center;
                         font-size: 1.8rem;
-                        transition: 0.1s linear;
 
                         &:hover {
                             transform: scale(1.03);
@@ -426,7 +497,6 @@ header {
             color: white;
             text-align: center;
             font-size: 1.8rem;
-            transition: 0.1s linear;
 
             &:hover {
                 transform: scale(1.03);
