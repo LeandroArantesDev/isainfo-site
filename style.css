@@ -38,15 +38,15 @@ html {
 
 }
 
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 6rem 1rem;
+}
+
 body {
     background-color: var(--branco);
-
-    & .interface {
-        max-width: 1280px;
-        margin: 0 auto;
-        width: 100%;
-        padding: 0 1rem;
-    }
 }
 
 section {
@@ -347,7 +347,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5rem 0rem;
     background-color: var(--branco-azulado);
 
     & .interface {
@@ -512,7 +511,6 @@ header {
 
 #vantagens {
     background-color: var(--branco);
-    padding: 5rem 0rem;
 
     & .interface {
         display: flex;
