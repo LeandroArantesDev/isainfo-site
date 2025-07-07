@@ -16,7 +16,7 @@ html {
 :root {
     /* Paleta de cores */
     --branco: #f3f3f3;
-    --branco-azulado: #e2e8ee;
+    --branco-azulado: #eef1f5;
     --preto: #101010;
     --preto-opaco: #000000cb;
     --branco-transparente: #ede7d92c;
@@ -38,15 +38,15 @@ html {
 
 }
 
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 6rem 1rem;
+}
+
 body {
     background-color: var(--branco);
-
-    & .interface {
-        max-width: 1280px;
-        margin: 0 auto;
-        width: 100%;
-        padding: 0 1rem;
-    }
 }
 
 section {
@@ -347,7 +347,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5rem 0rem;
     background-color: var(--branco-azulado);
 
     & .interface {
@@ -367,48 +366,39 @@ header {
 
             & article {
                 background-color: white;
-                box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.322);
+                box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
                 border-radius: 2rem;
-                height: 45rem;
+                height: 50rem;
+                position: relative;
 
-                & .preco {
-                    background-color: var(--azul-claro);
-                    padding: 2rem;
+                & .txt-preco {
+                    background: var(--degrade-azul);
+                    padding: 5rem 0;
+                    height: 30%;
                     border-radius: 2rem 2rem 0 0;
-                    height: 25%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
+                    gap: .5rem;
 
-                    & .plano {
-                        font-size: 1.7rem;
-                        color: white;
-                        font-weight: bold;
+                    & .plano,
+                    .preco,
+                    .mega {
+                        font-size: 2rem;
+                        color: var(--branco);
                         width: 100%;
                         text-align: center;
                     }
 
                     & .preco {
-                        font-size: 1.7rem;
-                        color: white;
+                        font-size: 3rem;
                         font-weight: bold;
-                        width: 100%;
-                        text-align: center;
 
                         & span {
                             font-weight: normal;
+                            font-size: 1.5rem;
                         }
-                    }
-
-                    & .mega {
-                        font-size: 1.7rem;
-                        color: white;
-                        font-weight: bold;
-                        width: 100%;
-                        text-align: center;
-
-
                     }
                 }
 
@@ -418,7 +408,7 @@ header {
                     gap: 1rem;
                     justify-content: space-between;
                     padding: 1.5rem;
-                    height: 75%;
+                    height: 70%;
 
                     & .info {
                         display: flex;
@@ -441,7 +431,7 @@ header {
                     }
 
                     & a {
-                        background-color: rgb(82, 213, 82);
+                        background: var(--degrade-azul);
                         border-radius: 1rem;
                         padding: 1rem 2rem;
                         width: 100%;
@@ -458,30 +448,35 @@ header {
                 }
 
                 &:hover {
-                    transform: scale(1.04);
+                    transform: scale(1.05);
                 }
             }
 
             & .popular {
-                transform: scale(1.03);
+                transform: scale(1.05);
+                border-radius: 2.5rem;
+                border: .4rem solid var(--azul-ciano);
 
-                & .preco {
-                    padding-top: 3rem;
+                & .tag {
+                    position: absolute;
+                    top: -5%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: var(--azul-claro);
+                    z-index: 100;
+                    padding: 1rem 1.5rem;
+                    color: var(--branco);
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 0.5rem;
+                    border-radius: 2rem;
+                }
 
-                    & .popular {
-                        position: fixed;
-                        top: -1rem;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        background-color: red;
-                        z-index: 1000;
-                        padding: 0.5rem 1rem;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        gap: 0.5rem;
-                        border-radius: 2rem;
-                    }
+                &:hover {
+                    transform: scale(1.08);
                 }
             }
         }
@@ -491,7 +486,7 @@ header {
         }
 
         & .btn-falar {
-            background-color: rgb(82, 213, 82);
+            background-color: var(--verde-zap);
             border-radius: 1rem;
             padding: 1.5rem 6rem;
             text-decoration: none;
@@ -500,7 +495,7 @@ header {
             font-size: 1.8rem;
 
             &:hover {
-                transform: scale(1.03);
+                transform: scale(1.05);
                 background-color: rgb(63, 161, 63);
             }
         }
@@ -512,7 +507,6 @@ header {
 
 #vantagens {
     background-color: var(--branco);
-    padding: 5rem 0rem;
 
     & .interface {
         display: flex;
