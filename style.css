@@ -30,7 +30,7 @@ html {
 
     /* Cores de fontes */
     --fonte-branco: #ffffff;
-    --fonte-azul-claro: #087CA7;
+    --fonte-azul-claro: rgba(36, 97, 231, 1);
     --degrade-azul: linear-gradient(100deg, rgba(36, 97, 231, 1) 0%, rgba(30, 65, 178, 1) 100%);
     /* Cores de fontes */
 
@@ -519,27 +519,28 @@ header {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        gap: 2rem;
+        gap: 2.5rem;
 
         & .container-cards {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
+            gap: 2.5rem;
 
             & article {
                 background-color: white;
                 border-radius: 1rem;
                 width: 100%;
                 padding: 2rem;
-                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
                 display: flex;
                 align-items: left;
                 justify-content: center;
                 flex-direction: column;
                 gap: 1rem;
+                border: 1px solid rgb(231, 231, 231);
 
                 & i {
-                    background-color: var(--azul-claro);
+                    background: var(--degrade-azul);
                     padding: 1rem;
                     border-radius: 1rem;
                     color: var(--fonte-branco);
@@ -558,16 +559,37 @@ header {
                 & p {
                     font-size: 1.5rem;
                 }
+
+                &:hover {
+                    transform: translateY(-10px) scale(1.05);
+                    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.3);
+
+                    & i {
+                        transform: scale(1.15);
+                    }
+
+                    & h3 {
+                        color: var(--fonte-azul-claro);
+                    }
+                }
             }
 
-            & .grid3 {
+            & div {
                 grid-column: span 3;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 2rem;
-                background-color: rgb(42, 67, 169);
+                background: var(--degrade-azul);
                 color: var(--fonte-branco);
+                display: flex;
+                align-items: left;
+                justify-content: center;
+                flex-direction: column;
+                border-radius: 1rem;
+                width: 100%;
+                padding: 4rem;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 
                 & h3 {
                     font-size: 1.8rem;
@@ -584,8 +606,9 @@ header {
                     font-weight: bold;
                     font-size: 1.5rem;
                     background-color: var(--branco);
-                    padding: 1rem;
+                    padding: 2rem;
                     border-radius: 1rem;
+                    color: var(--fonte-azul-claro);
                 }
             }
         }
