@@ -31,6 +31,7 @@ html {
     /* Cores de fontes */
     --fonte-branco: #ffffff;
     --fonte-azul-claro: #087CA7;
+    --degrade-azul: linear-gradient(100deg, rgba(36, 97, 231, 1) 0%, rgba(30, 65, 178, 1) 100%);
     /* Cores de fontes */
 
     --verde-zap: rgb(100, 175, 100);
