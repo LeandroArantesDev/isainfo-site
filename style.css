@@ -18,19 +18,22 @@ html {
     --branco: #fff;
     --branco-opaco: #ffffff2f;
     --preto: #000;
-    --cinza-texto: #00000060;
-    --azul: #2360E8;
+    --cinza-texto: #0000008a;
+    --cinza-claro-texto: #ffffffa1;
+    --azul: #2378e8;
     --azul-opaco: #2361e831;
     --degrade-azul: linear-gradient(100deg, rgba(36, 97, 231, 1) 0%, rgba(30, 65, 178, 1) 100%);
     --fundo-cinza: #F9FAFB;
     --verde: #23C55E;
     --verde-hover: #16A34A;
     --roxo: #9739ED;
-    --azul-claro: #F4F9FF;
+    --azul-claro: #a6ceff;
+    --azul-claro-opaco: #a6ceff2a;
 
     /* Utilizaveis */
     --border-radius: 1rem;
     --blur: blur(5px);
+    --sombra-texto: 5px 5px 8px rgba(0, 0, 0, 0.5);
 }
 
 .interface {
@@ -83,12 +86,12 @@ section {
 }
 
 .titulo {
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--preto);
 }
 
 .subtitulo {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     width: 70%;
     text-align: center;
     color: var(--cinza-texto);
@@ -159,33 +162,32 @@ header {
                     width: 50%;
                 }
             }
+        }
 
-            & .whats,
-            .boleto {
-                padding: 1rem 2rem;
-                border-radius: 1rem;
+        & #whats,
+        #boleto {
+            padding: 1rem 2rem;
+            border-radius: 1rem;
 
-                &::after,
-                &::before {
-                    display: none;
-                }
-
-                &:hover {
-                    transform: scale(1.05);
-                }
+            &::after,
+            &::before {
+                display: none;
             }
 
-            & .whats {
-                background-color: var(--verde);
+            &:hover {
+                transform: scale(1.05);
             }
+        }
 
-            & .boleto {
-                background-color: rgb(46, 76, 151);
-            }
+        & #whats {
+            background-color: var(--verde);
+        }
+
+        & #boleto {
+            background-color: rgb(46, 76, 151);
         }
     }
 }
-
 
 /* Hero */
 
@@ -212,19 +214,20 @@ header {
             display: flex;
             align-items: center;
             gap: 1rem;
-            color: var(--azul);
+            color: var(--azul-claro);
             font-weight: bold;
-            background-color: var(--azul-opaco);
+            background-color: var(--azul-claro-opaco);
             backdrop-filter: blur(2px);
             width: max-content;
             font-size: 1.5rem;
-            border: 1px solid var(--azul);
+            border: 1px solid var(--azul-claro);
         }
 
         & h1 {
             color: var(--branco);
             font-size: 7rem;
             line-height: .8;
+            text-shadow: var(--sombra-texto);
 
             & span {
                 color: var(--azul);
@@ -234,6 +237,7 @@ header {
         & h2 {
             color: var(--branco);
             font-size: 3rem;
+            text-shadow: var(--sombra-texto);
         }
 
         & .cards {
@@ -306,7 +310,8 @@ header {
         background-image: url('img/img-hero.jpg');
         background-size: cover;
         background-position: center;
-        filter: brightness(.5);
+        filter: brightness(.4) blur(1px);
+        border: 1px solid var(--preto);
         z-index: -1;
     }
 
@@ -375,7 +380,6 @@ header {
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
-                    gap: .5rem;
 
                     & .plano,
                     .preco,
@@ -387,7 +391,7 @@ header {
                     }
 
                     & .preco {
-                        font-size: 3rem;
+                        font-size: 4rem;
                         font-weight: bold;
 
                         & span {
@@ -450,14 +454,14 @@ header {
             & .popular {
                 transform: scale(1.05);
                 border-radius: 2.5rem;
-                border: .4rem solid var(--azul-ciano);
+                border: .4rem solid #9EBEF8;
 
                 & .tag {
                     position: absolute;
                     top: -5%;
                     left: 50%;
                     transform: translateX(-50%);
-                    background: var(--azul-claro);
+                    background: #3980F5;
                     z-index: 100;
                     padding: 1rem 1.5rem;
                     color: var(--branco);
@@ -481,17 +485,17 @@ header {
         }
 
         & .btn-falar {
-            background-color: var(--verde-zap);
-            border-radius: 1rem;
+            background-color: var(--verde);
+            border-radius: var(--border-radius);
             padding: 1.5rem 6rem;
             text-decoration: none;
-            color: white;
+            color: var(--branco);
             text-align: center;
             font-size: 1.8rem;
 
             &:hover {
                 transform: scale(1.05);
-                background-color: rgb(63, 161, 63);
+                background-color: var(--verde-hover);
             }
         }
 
@@ -516,8 +520,8 @@ header {
             gap: 2.5rem;
 
             & article {
-                background-color: white;
-                border-radius: 1rem;
+                background-color: var(--branco);
+                border-radius: var(--border-radius);
                 width: 100%;
                 padding: 2rem;
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -532,7 +536,7 @@ header {
                     background: var(--degrade-azul);
                     padding: 1rem;
                     border-radius: 1rem;
-                    color: var(--fonte-branco);
+                    color: var(--branco);
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -558,35 +562,36 @@ header {
                     }
 
                     & h3 {
-                        color: var(--fonte-azul-claro);
+                        color: var(--azul);
                     }
                 }
             }
 
-            & div {
+            & #propaganda {
                 grid-column: span 3;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 2rem;
                 background: var(--degrade-azul);
-                color: var(--fonte-branco);
+                color: var(--branco);
                 display: flex;
                 align-items: left;
                 justify-content: center;
                 flex-direction: column;
-                border-radius: 1rem;
+                border-radius: var(--border-radius);
                 width: 100%;
                 padding: 4rem;
                 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 
                 & h3 {
-                    font-size: 1.8rem;
+                    font-size: 3.5rem;
                 }
 
                 & p {
-                    font-size: 1.5rem;
+                    font-size: 2rem;
                     width: 50%;
+                    color: var(--cinza-claro-texto);
                     text-align: center;
                 }
 
@@ -595,9 +600,13 @@ header {
                     font-weight: bold;
                     font-size: 1.5rem;
                     background-color: var(--branco);
-                    padding: 2rem;
-                    border-radius: 1rem;
-                    color: var(--fonte-azul-claro);
+                    padding: 2rem 5rem;
+                    border-radius: var(--border-radius);
+                    color: var(--azul);
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
