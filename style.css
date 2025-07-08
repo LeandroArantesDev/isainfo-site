@@ -15,27 +15,22 @@ html {
 
 :root {
     /* Paleta de cores */
-    --branco: #f3f3f3;
-    --branco-azulado: #eef1f5;
-    --preto: #101010;
-    --preto-opaco: #000000cb;
-    --branco-transparente: #ede7d92c;
-    --cinza: #A49694;
-    --azul-escuro: #011936;
-    --azul-escuro-transparente: #0119366a;
-    --azul-claro: #579AF7;
-    --azul-claro-transparente: #087da737;
-    --azul-ciano: #05B2DC;
-    /* Paleta de cores */
-
-    /* Cores de fontes */
-    --fonte-branco: #ffffff;
-    --fonte-azul-claro: rgba(36, 97, 231, 1);
+    --branco: #fff;
+    --branco-opaco: #ffffff2f;
+    --preto: #000;
+    --cinza-texto: #00000060;
+    --azul: #2360E8;
+    --azul-opaco: #2361e831;
     --degrade-azul: linear-gradient(100deg, rgba(36, 97, 231, 1) 0%, rgba(30, 65, 178, 1) 100%);
-    /* Cores de fontes */
+    --fundo-cinza: #F9FAFB;
+    --verde: #23C55E;
+    --verde-hover: #16A34A;
+    --roxo: #9739ED;
+    --azul-claro: #F4F9FF;
 
-    --verde-zap: rgb(100, 175, 100);
-
+    /* Utilizaveis */
+    --border-radius: 1rem;
+    --blur: blur(5px);
 }
 
 .interface {
@@ -66,7 +61,7 @@ section {
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
-    background-color: var(--verde-zap);
+    background-color: var(--verde);
     animation: balancar .8s infinite;
     border: .5rem solid var(--branco);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -96,7 +91,7 @@ section {
     font-size: 1.8rem;
     width: 70%;
     text-align: center;
-    color: var(--preto-opaco);
+    color: var(--cinza-texto);
 }
 
 /* Header */
@@ -181,7 +176,7 @@ header {
             }
 
             & .whats {
-                background-color: var(--verde-zap);
+                background-color: var(--verde);
             }
 
             & .boleto {
@@ -217,27 +212,27 @@ header {
             display: flex;
             align-items: center;
             gap: 1rem;
-            color: var(--azul-claro);
+            color: var(--azul);
             font-weight: bold;
-            background-color: var(--azul-claro-transparente);
+            background-color: var(--azul-opaco);
             backdrop-filter: blur(2px);
             width: max-content;
             font-size: 1.5rem;
-            border: 1px solid var(--azul-claro);
+            border: 1px solid var(--azul);
         }
 
         & h1 {
-            color: var(--fonte-branco);
+            color: var(--branco);
             font-size: 7rem;
             line-height: .8;
 
             & span {
-                color: var(--azul-claro);
+                color: var(--azul);
             }
         }
 
         & h2 {
-            color: var(--fonte-branco);
+            color: var(--branco);
             font-size: 3rem;
         }
 
@@ -254,10 +249,10 @@ header {
                 align-items: center;
                 gap: 1rem;
                 border-radius: 2rem;
-                color: var(--fonte-branco);
-                background-color: var(--branco-transparente);
+                color: var(--branco);
+                background-color: var(--branco-opaco);
                 border: 1px solid var(--branco);
-                backdrop-filter: blur(2px);
+                backdrop-filter: var(--blur);
                 padding: 0.5rem 1rem;
                 font-size: 1.5rem;
             }
@@ -279,7 +274,7 @@ header {
                 padding: 1rem 2rem;
                 font-size: 2rem;
                 text-decoration: none;
-                color: var(--fonte-branco);
+                color: var(--branco);
                 border-radius: 1rem;
 
                 &:hover {
@@ -288,14 +283,14 @@ header {
             }
 
             & .fale-conosco {
-                background-color: rgb(100, 175, 100);
+                background-color: var(--verde);
                 border: 1px solid transparent;
             }
 
             & .planos {
-                background-color: var(--branco-transparente);
+                background-color: var(--branco-opaco);
                 border: 1px solid var(--branco);
-                backdrop-filter: blur(2px);
+                backdrop-filter: var(--blur);
 
             }
         }
@@ -311,7 +306,7 @@ header {
         background-image: url('img/img-hero.jpg');
         background-size: cover;
         background-position: center;
-        filter: brightness(.4);
+        filter: brightness(.5);
         z-index: -1;
     }
 
@@ -347,7 +342,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--branco-azulado);
+    background-color: var(--fundo-cinza);
 
     & .interface {
         display: flex;
@@ -365,7 +360,7 @@ header {
             margin-bottom: 2rem;
 
             & article {
-                background-color: white;
+                background-color: var(--branco);
                 box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
                 border-radius: 2rem;
                 height: 50rem;
