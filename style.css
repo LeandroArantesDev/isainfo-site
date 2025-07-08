@@ -612,3 +612,48 @@ header {
         }
     }
 }
+
+/* Footer */
+
+footer {
+    background-color: #18212F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .interface {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+
+        & #termos {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        & p {
+            color: var(--cinza-claro-texto);
+            text-align: center;
+            font-size: 1.4rem;
+        }
+
+        & a {
+            text-decoration: none;
+            color: var(--cinza-claro-texto);
+            font-size: 1.4rem;
+        }
+
+        & nav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+    }
+
+
+}
