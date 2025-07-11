@@ -57,7 +57,7 @@
                 <div class="container-cards">
                     <article>
                         <div class="txt-preco">
-                            <p class="plano">Básico</p>
+                            <p class="plano"><span id="start">Start</span></p>
                             <p class="preco">R$ 50,00<span>/mês</span></p>
                             <p class="mega"><i class="fa-solid fa-bolt"></i>300 Mega</p>
                         </div>
@@ -65,9 +65,11 @@
                             <div class="info">
                                 <p><i class="fa-solid fa-check"></i>Download: 300 Mbps</p>
                                 <p><i class="fa-solid fa-check"></i>Upload: 300 Mbps</p>
-                                <p><i class="fa-solid fa-check"></i>Modem incluso</p>
+                                <p><i class="fa-solid fa-check"></i>Internet Ilimitada</p>
+                                <p><i class="fa-solid fa-check"></i>100% Fibra Óptica</p>
+                                <p><i class="fa-solid fa-check"></i>Roteador Wi-Fi incluso</p>
                                 <p><i class="fa-solid fa-check"></i>Instalação gratuita</p>
-                                <p><i class="fa-solid fa-check"></i>Suporte técnico</p>
+                                <p><i class="fa-solid fa-check"></i>Suporte VIP</p>
                             </div>
                             <a href="">Assinar Agora</a>
                         </div>
@@ -75,7 +77,7 @@
                     <article class="popular">
                         <div class="txt-preco">
                             <p class="tag"><i class="fa-regular fa-star"></i>Mais Popular</p>
-                            <p class="plano">Intermediário</p>
+                            <p class="plano"><span id="turbo">Turbo</span></p>
                             <p class="preco">R$ 70,00<span>/mês</span></p>
                             <p class="mega"><i class="fa-solid fa-bolt"></i>500 Mega</p>
                         </div>
@@ -83,17 +85,18 @@
                             <div class="info">
                                 <p><i class="fa-solid fa-check"></i>Download: 500 Mbps</p>
                                 <p><i class="fa-solid fa-check"></i>Upload: 500 Mbps</p>
-                                <p><i class="fa-solid fa-check"></i>Modem Wi-Fi 6 incluso</p>
+                                <p><i class="fa-solid fa-check"></i>Internet Ilimitada</p>
+                                <p><i class="fa-solid fa-check"></i>100% Fibra Óptica</p>
+                                <p><i class="fa-solid fa-check"></i>Roteador Wi-Fi Plus incluso</p>
                                 <p><i class="fa-solid fa-check"></i>Instalação gratuita</p>
-                                <p><i class="fa-solid fa-check"></i>Suporte prioritário</p>
-                                <p><i class="fa-solid fa-check"></i>Streaming 4K liberado</p>
+                                <p><i class="fa-solid fa-check"></i>Suporte VIP</p>
                             </div>
                             <a href="">Assinar Agora</a>
                         </div>
                     </article>
                     <article>
                         <div class="txt-preco">
-                            <p class="plano">Avançado</p>
+                            <p class="plano"><span id="ultra">Ultra</span></p>
                             <p class="preco">R$ 100,00<span>/mês</span></p>
                             <p class="mega"><i class="fa-solid fa-bolt"></i>800 Mega</p>
                         </div>
@@ -101,11 +104,13 @@
                             <div class="info">
                                 <p><i class="fa-solid fa-check"></i>Download: 800 Mbps</p>
                                 <p><i class="fa-solid fa-check"></i>Upload: 800 Mbps</p>
-                                <p><i class="fa-solid fa-check"></i>Modem Wi-Fi 6E incluso</p>
+                                <p><i class="fa-solid fa-check"></i>Internet Ilimitada</p>
+                                <p><i class="fa-solid fa-check"></i>100% Fibra Óptica</p>
+                                <p><i class="fa-solid fa-check"></i>Roteador Wi-Fi Plus incluso</p>
                                 <p><i class="fa-solid fa-check"></i>Instalação gratuita</p>
-                                <p><i class="fa-solid fa-check"></i>Suporte VIP 24h</p>
-                                <p><i class="fa-solid fa-check"></i>IP fixo incluso</p>
-                                <p><i class="fa-solid fa-check"></i>Gaming otimizado</p>
+                                <p><i class="fa-solid fa-check"></i>Suporte VIP Prioritário</p>
+                                <p><i class="fa-solid fa-check"></i>Monitoramento <span><img src="img/smartlt.png"
+                                            alt="Monitoramento Smart LT"></span></p>
                             </div>
                             <a href="">Assinar Agora</a>
                         </div>
@@ -170,24 +175,26 @@
                 <div class="container">
                     <div class="mensagem">
                         <h2>Envie uma Mensagem</h2>
-                        <form action="">
+                        <form id="formulario" action="">
                             <div class="form-group">
                                 <label for="nome">Nome Completo</label>
-                                <input type="text" name="nome" id="nome" placeholder="Seu nome completo">
+                                <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required
+                                    pattern="^[A-Za-zÀ-ÿ\s]{3,}$">
                             </div>
                             <div class="form-group">
                                 <label for="telefone">Telefone</label>
-                                <input type="text" name="telefone" id="telefone" placeholder="(11)99999-9999">
+                                <input type="text" name="telefone" id="telefone" placeholder="(11) 99999-9999" required>
                             </div>
                             <div class="form-group grid2">
                                 <label for="email">E-mail</label>
-                                <input type="text" name="email" id="email" placeholder="seu@email.com">
+                                <input type="email" name="email" id="email" placeholder="seu@email.com" required>
                             </div>
                             <div class="form-group grid2">
                                 <label for="mensagem">Mensagem</label>
-                                <textarea name="mensagem" id="mensagem" placeholder="Como podemos ajudá-lo?"></textarea>
+                                <textarea name="mensagem" id="mensagem" placeholder="Como podemos ajudá-lo?" required
+                                    minlength="5"></textarea>
                             </div>
-                            <button type="submit" class="grid2"><i class="fa-solid fa-arrow-right"></i>Enviar
+                            <button type="submit" class="grid2"><i class="fa-solid fa-arrow-right"></i> Enviar
                                 Mensagem</button>
                         </form>
                     </div>
@@ -240,6 +247,7 @@
                     href="https://www.walysson.com.br/">Walysson</a></p>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
