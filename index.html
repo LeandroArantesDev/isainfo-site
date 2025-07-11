@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <title>Isainfo Internet</title>
 </head>
 
@@ -120,6 +126,30 @@
                 <a href="" class="btn-falar">Falar com especialista</a>
             </div>
         </section>
+        <section id="carrossel" class="swiper-container-section">
+            <div class="interface">
+                <!-- Swiper -->
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <img src="img/slide1.jpg" alt="Primeira imagem do carrossel">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <img src="img/slide2.jpg" alt="Segunda imagem do carrossel">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <img src="img/slide3.jpg" alt="Terceira imagem do carrossel">
+                        </div>
+                    </div>
+
+                    <!-- Paginação -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
         <section id="vantagens">
             <div class="interface">
                 <h2 class="titulo">Por que Escolher a IsaInfo?</h2>
@@ -226,7 +256,6 @@
                             width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
-
                     </div>
                 </div>
             </div>
@@ -236,15 +265,21 @@
         <div class="interface">
             <div id="termos">
                 <p>© 2025 IsaInfo Telecomunicações. Todos os direitos reservados.</p>
+                <p>CNPJ: 12.345.678/0001-90 | Autorização ANATEL nº 12345</p>
                 <nav>
                     <a href="">Política de Privacidade</a>
                     <a href="">Termos de Uso</a>
                     <a href="">LGPD</a>
                 </nav>
             </div>
-            <p>CNPJ: 12.345.678/0001-90 | Autorização ANATEL nº 12345</p>
-            <p>Feito por <a href="https://leandroarantes.com.br/">Leandro</a> e <a
-                    href="https://www.walysson.com.br/">Walysson</a></p>
+            <div id="barra"></div>
+            <div class="criadores">
+                <p>Feito por
+                    <a href="https://leandroarantes.com.br/">Leandro</a>
+                    e
+                    <a href="https://www.walysson.com.br/">Walysson</a>
+                </p>
+            </div>
         </div>
     </footer>
     <script src="script.js"></script>
