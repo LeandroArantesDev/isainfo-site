@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Obrigado</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+        background-color: rgb(240, 240, 240);
+
+        & .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            height: 100vh;
+
+            & i {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                font-size: 2rem;
+                background-color: #a9f683b8;
+                color: #418522;
+            }
+
+            & p {
+                color: var(--preto-opaco);
+            }
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <i class="fa-solid fa-thumbs-up"></i>
+        <h1>Obrigado!</h1>
+        <p>
+            Sua mensagem foi enviada com sucesso! Você será respondido o mais rápido possível!
+        </p>
+        <p>Você será redirecionado automaticamente em <span>5</span> segundos...</p>
+    </div>
+    <script>
+        let seconds = 5;
+        const span = document.querySelector('span');
+        const interval = setInterval(() => {
+            seconds--;
+            span.textContent = seconds;
+            if (seconds <= 0) {
+                clearInterval(interval);
+                window.location.href = "https://leandroarantesdev.github.io/isainfo-site/index.html";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
