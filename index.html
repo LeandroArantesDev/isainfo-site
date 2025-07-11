@@ -18,19 +18,28 @@
 <body>
     <header>
         <div class="interface">
-            <a href="#">
+            <a href="/">
                 <img src="img/logo.png" alt="Logo da marca">
             </a>
-            <nav>
-                <a href="#"><i class="fa-solid fa-house"></i> Inicio</a>
-                <a href="#planos"><i class="fa-solid fa-money-bill"></i> Planos</a>
-                <a href="#vantagens"><i class="fa-solid fa-star"></i> Vantagens</a>
-                <a href="#contato"><i class="fa-solid fa-envelope"></i> Contato</a>
+            <nav id="menu">
+                <button id="btn-fechar-menu" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></button>
+                <a href="#" onclick="toggleMenu()"><i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="#planos" onclick="toggleMenu()"><i class="fa-solid fa-money-bill"></i> Planos</a>
+                <a href="#vantagens" onclick="toggleMenu()"><i class="fa-solid fa-star"></i> Vantagens</a>
+                <a href="#contato" onclick="toggleMenu()"><i class="fa-solid fa-envelope"></i> Contato</a>
+                <a href="#" id="app" class="mobile" onclick="toggleMenu()">
+                    <i class="fa-solid fa-download"></i>Baixar App
+                </a>
+                <a href="#" id="boleto" class="mobile" onclick="toggleMenu()">
+                    <i class="fa-solid fa-file-lines"></i>2º via
+                </a>
             </nav>
             <nav class="btn-container">
-                <a href="#" id="whats"><i class="fa-solid fa-download"></i>Baixar App</a>
+                <a href="#" id="app"><i class="fa-solid fa-download"></i>Baixar App</a>
                 <a href="#" id="boleto"><i class="fa-solid fa-file-lines"></i>2º via</a>
             </nav>
+            <button id="btn-mobile" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+            <div id="overlay" onclick="toggleMenu()"></div>
         </div>
     </header>
     <main>
@@ -264,7 +273,7 @@
     <footer>
         <div class="interface">
             <div id="termos">
-                <p>© 2025 IsaInfo Telecomunicações. Todos os direitos reservados.</p>
+                <p>© 2025 IsaInfo. Todos os direitos reservados.</p>
                 <p>CNPJ: 12.345.678/0001-90 | Autorização ANATEL nº 12345</p>
                 <nav>
                     <a href="">Política de Privacidade</a>

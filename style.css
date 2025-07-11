@@ -167,9 +167,13 @@ header {
                     width: 50%;
                 }
             }
+
+            & .mobile {
+                display: none;
+            }
         }
 
-        & #whats,
+        & #app,
         #boleto {
             padding: 1rem 2rem;
             border-radius: 1rem;
@@ -184,12 +188,18 @@ header {
             }
         }
 
-        & #whats {
+        & #app {
             background-color: var(--verde);
         }
 
         & #boleto {
             background-color: rgb(46, 76, 151);
+        }
+
+        & #btn-mobile,
+        #overlay,
+        #btn-fechar-menu {
+            display: none;
         }
     }
 }
@@ -315,8 +325,7 @@ header {
         background-image: url('img/img-hero.jpg');
         background-size: cover;
         background-position: center;
-        filter: brightness(.4) blur(1px);
-        border: 1px solid var(--preto);
+        filter: brightness(.4);
         z-index: -1;
     }
 
@@ -795,7 +804,6 @@ header {
 
                         &:hover {
                             transform: scale(1.01);
-                            ;
                         }
                     }
                 }
@@ -927,3 +935,222 @@ footer {
         }
     }
 }
+
+/* Responsividade */
+/* Celular */
+@media screen and (max-width: 767px) {
+
+    /* Geral */
+    .titulo {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .subtitulo {
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Header */
+    header {
+        & .interface {
+            & .btn-container {
+                display: none;
+            }
+
+            & #menu {
+                position: fixed;
+                right: -100%;
+                top: 0;
+                background: #18212F;
+                height: 100dvh;
+                width: 80%;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem;
+                z-index: 1000;
+
+                & a {
+                    font-size: 2.5rem;
+                }
+
+                & .mobile {
+                    display: flex;
+                    width: 100%;
+                }
+
+                & #btn-fechar-menu {
+                    display: block;
+                    position: absolute;
+                    top: 1rem;
+                    left: 2rem;
+                    background-color: transparent;
+                    border: none;
+                    color: var(--branco);
+                    font-size: 4rem;
+                }
+
+                &.ativo {
+                    right: 0;
+                }
+            }
+
+            & #btn-mobile {
+                display: block;
+                font-size: 3.5rem;
+                background-color: transparent;
+                border: none;
+                color: var(--branco);
+            }
+
+            & #overlay {
+                display: block;
+                position: fixed;
+                visibility: hidden;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100dvh;
+                background-color: #0000006e;
+                z-index: 800;
+
+                &.ativo {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+
+    /* Hero */
+    #hero {
+        height: auto;
+        min-height: 100dvh;
+
+        & .interface {
+            justify-content: center;
+            align-items: center;
+
+            & h1 {
+                font-size: 5rem;
+                text-align: center;
+            }
+
+            & h2 {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            & .cards {
+                flex-direction: column;
+                width: 100%;
+
+                & p {
+                    width: 100%;
+                }
+            }
+
+            & nav {
+                width: 100%;
+
+                & .fale-conosco,
+                .planos {
+                    width: 50%;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    /* Planos */
+    #planos {
+        & .interface {
+            & .container-cards {
+                padding: 2.5rem 0;
+                overflow-x: auto;
+                grid-auto-flow: column;
+                grid-auto-columns: 80%;
+                grid-template-columns: none;
+
+                & article {
+                    &:hover {
+                        transform: none;
+                    }
+                }
+
+                & .popular {
+                    transform: none;
+
+                    &:hover {
+                        transform: none;
+                    }
+                }
+            }
+
+            & .duvidas {
+                text-align: center;
+            }
+        }
+    }
+
+    /* Vantagens */
+    #vantagens {
+        & .interface {
+            & .container-cards {
+                gap: 1rem;
+                grid-template-columns: repeat(2, 1fr);
+
+                & #propaganda {
+                    grid-column: span 2;
+
+                    & h3 {
+                        text-align: center;
+                    }
+
+                    & p,
+                    a {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Contato */
+    #contato {
+        & .interface {
+            & .container {
+                flex-direction: column-reverse;
+
+                & .mensagem,
+                .informacoes {
+                    width: 100%;
+                }
+
+                & .informacoes {
+                    & article {
+                        & i {
+                            min-width: 4rem;
+                            min-height: 4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /* Footer */
+    footer {
+        & .interface {
+            & #termos {
+                gap: 2rem;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 1024px) {}

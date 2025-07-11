@@ -73,3 +73,12 @@ const swiper = new Swiper('.swiper', {
         clickable: true,
     }
 });
+
+// Menu mobile
+const overlay = document.getElementById('overlay');
+const menu = document.getElementById('menu');
+
+function toggleMenu() {
+    menu.classList.toggle('ativo');
+    overlay.classList.toggle('ativo');
+}
