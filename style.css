@@ -516,6 +516,55 @@ header {
     }
 }
 
+/* Carrossel */
+#carrossel {
+    & .interface {
+        padding-bottom: 0;
+    }
+
+    & .swiper {
+        position: relative;
+        width: 100%;
+        height: 53rem;
+        border-radius: 2rem;
+        overflow: hidden;
+
+        & .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        & .swiper-pagination-bullet {
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: var(--branco);
+        }
+
+        & .swiper-pagination-bullet-active {
+            background-color: var(--branco);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            pointer-events: none;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+            z-index: 5;
+        }
+    }
+}
+
 /* Vantagens */
 
 #vantagens {
@@ -656,7 +705,7 @@ header {
             }
 
             & .mensagem {
-                background-color: var(--branco);
+                background-color: var(--azul-claro-opaco);
                 border-radius: var(--border-radius);
                 width: 50%;
                 box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -665,13 +714,13 @@ header {
                 align-items: baseline;
                 flex-direction: column;
                 gap: 1rem;
-                padding: 1rem;
+                padding: 2rem;
 
                 & form {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     width: 100%;
-                    gap: 1rem;
+                    gap: 1.5rem;
 
                     & .grid2 {
                         grid-column: span 2;
@@ -701,7 +750,7 @@ header {
                             border: 1px solid rgb(187, 187, 187);
                             padding: 1rem;
                             width: 100%;
-                            height: 300px;
+                            height: 20rem;
                             resize: none;
                         }
                     }
@@ -720,6 +769,7 @@ header {
                         text-align: center;
                         font-size: 1.8rem;
                         border: none;
+                        cursor: pointer;
 
                         &:hover {
                             transform: scale(1.01);
@@ -743,7 +793,7 @@ header {
                     align-items: center;
                     justify-content: left;
                     background-color: var(--branco);
-                    padding: 2rem 1rem;
+                    padding: 1rem;
                     border-radius: var(--border-radius);
                     gap: 1rem;
                     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -789,6 +839,11 @@ header {
                         color: var(--branco);
                     }
                 }
+
+                & iframe {
+                    border-radius: var(--border-radius);
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+                }
             }
         }
     }
@@ -815,6 +870,16 @@ footer {
             justify-content: space-between;
             align-items: center;
             width: 100%;
+
+            & a {
+                text-decoration: none;
+            }
+        }
+
+        & #barra {
+            height: 1px;
+            width: 70%;
+            background-color: var(--branco-opaco);
         }
 
         & p {
@@ -824,7 +889,6 @@ footer {
         }
 
         & a {
-            text-decoration: none;
             color: var(--cinza-claro-texto);
             font-size: 1.4rem;
 
@@ -840,6 +904,4 @@ footer {
             gap: 1rem;
         }
     }
-
-
 }
