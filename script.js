@@ -92,3 +92,34 @@ const swiper = new Swiper('.swiper', {
         clickable: true,
     }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const imagens = [
+        'img/img-hero.jpg',
+        'img/slide1.jpg',
+        'img/slide2.jpg',
+        'img/slide3.jpg',
+    ];
+
+    let indice = 0;
+
+    setInterval(() => {
+        indice = (indice + 1) % imagens.length;
+
+        const estiloAntes = document.createElement('style');
+        estiloAntes.id = 'bg-dinamico';
+        estiloAntes.innerHTML = `
+            #hero::before {
+                background-image: url('${imagens[indice]}');
+            }
+        `;
+
+        // Remove o anterior se já existir
+        const antigoEstilo = document.getElementById('bg-dinamico');
+        if (antigoEstilo) {
+            antigoEstilo.remove();
+        }
+
+        document.head.appendChild(estiloAntes);
+    }, 3000);
+});

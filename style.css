@@ -318,6 +318,7 @@ header {
         filter: brightness(.4) blur(1px);
         border: 1px solid var(--preto);
         z-index: -1;
+        transition: background-image 0.2s ease-in-out;
     }
 
     & #seta-baixo {
