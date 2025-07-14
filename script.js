@@ -1,3 +1,13 @@
+// Loading
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader-wrapper');
+    loader.style.opacity = '0';
+    setTimeout(() => {
+        loader.style.display = 'none';
+    }, 750);
+});
+
+// Validação formulario
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('formulario');
 
