@@ -18,14 +18,21 @@
 <body>
     <header>
         <div class="interface">
-            <a href="#">
+            <a href="/">
                 <img src="img/logo.png" alt="Logo da marca">
             </a>
-            <nav>
-                <a href="#"><i class="fa-solid fa-house"></i> Inicio</a>
-                <a href="#planos"><i class="fa-solid fa-money-bill"></i> Planos</a>
-                <a href="#vantagens"><i class="fa-solid fa-star"></i> Vantagens</a>
-                <a href="#contato"><i class="fa-solid fa-envelope"></i> Contato</a>
+            <nav id="menu">
+                <button id="btn-fechar-menu" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></button>
+                <a href="#" onclick="toggleMenu()"><i class="fa-solid fa-house"></i> Inicio</a>
+                <a href="#planos" onclick="toggleMenu()"><i class="fa-solid fa-money-bill"></i> Planos</a>
+                <a href="#vantagens" onclick="toggleMenu()"><i class="fa-solid fa-star"></i> Vantagens</a>
+                <a href="#contato" onclick="toggleMenu()"><i class="fa-solid fa-envelope"></i> Contato</a>
+                <a href="#" id="app" class="mobile" onclick="toggleMenu()">
+                    <i class="fa-solid fa-download"></i>Baixar App
+                </a>
+                <a href="#" id="boleto" class="mobile" onclick="toggleMenu()">
+                    <i class="fa-solid fa-file-lines"></i>2º via
+                </a>
             </nav>
             <nav class="btn-container">
                 <a href="#" id="whats"><i class="fa-solid fa-download"></i>Baixar App</a>
@@ -33,6 +40,8 @@
                         class="fa-solid fa-file-lines"></i>2º
                     via</a>
             </nav>
+            <button id="btn-mobile" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
+            <div id="overlay" onclick="toggleMenu()"></div>
         </div>
     </header>
     <main>

@@ -123,3 +123,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.head.appendChild(estiloAntes);
     }, 3000);
 });
+
+// Menu mobile
+const overlay = document.getElementById('overlay');
+const menu = document.getElementById('menu');
+
+function toggleMenu() {
+    menu.classList.toggle('ativo');
+    overlay.classList.toggle('ativo');
+}
