@@ -30,18 +30,20 @@
                 <a href="#planos" onclick="toggleMenu()"><i class="fa-solid fa-money-bill"></i> Planos</a>
                 <a href="#vantagens" onclick="toggleMenu()"><i class="fa-solid fa-star"></i> Vantagens</a>
                 <a href="#contato" onclick="toggleMenu()"><i class="fa-solid fa-envelope"></i> Contato</a>
-                <a href="#" id="app" class="mobile" onclick="toggleMenu()">
+                <button id="app" class="mobile" onclick="toggleMenu(), alert('Em breve!')">
                     <i class="fa-solid fa-download"></i>Baixar App
-                </a>
-                <a href="#" id="boleto" class="mobile" onclick="toggleMenu()">
+                </button>
+                <a href="https://isainfo.assinante.net/auth/login" id="boleto" class="mobile" onclick="toggleMenu()"
+                    target="_blank">
                     <i class="fa-solid fa-file-lines"></i>2º via
                 </a>
             </nav>
             <nav class="btn-container">
-                <a onclick="alert('Em breve!')" id="app"><i class="fa-solid fa-download"></i>Baixar App</a>
-                <a href="https://isainfo.assinante.net/auth/login" id="boleto" target="_blank">
-                    <i class="fa-solid fa-file-lines"></i>
-                    2º via
+                <button id="app" onclick="toggleMenu(), alert('Em breve!')">
+                    <i class="fa-solid fa-download"></i>Baixar App
+                </button>
+                <a href="https://isainfo.assinante.net/auth/login" id="boleto" onclick="toggleMenu()" target="_blank">
+                    <i class="fa-solid fa-file-lines"></i>2º via
                 </a>
             </nav>
             <button id="btn-mobile" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>

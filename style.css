@@ -205,14 +205,21 @@ header {
             }
 
             & .mobile {
-                display: none;
+                display: none !important;
             }
         }
 
         & #app,
         #boleto {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
             padding: 1rem 2rem;
             border-radius: 1rem;
+            cursor: pointer;
+            border: none;
+            color: var(--branco);
 
             &::after,
             &::before {
@@ -1021,13 +1028,14 @@ footer {
                 padding: 2rem;
                 z-index: 1000;
 
-                & a {
+                & a,
+                #app {
                     font-size: 2.5rem;
                     width: 100%;
                 }
 
                 & .mobile {
-                    display: flex;
+                    display: flex !important;
                 }
 
                 & #btn-fechar-menu {
