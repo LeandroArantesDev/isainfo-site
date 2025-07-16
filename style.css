@@ -438,7 +438,6 @@ header {
                     align-items: center;
                     justify-content: center;
                     flex-direction: column;
-                    gap: 1rem;
 
                     & .plano,
                     .preco,
@@ -455,8 +454,7 @@ header {
                         & #start,
                         #turbo,
                         #ultra {
-                            font-size: 3rem;
-                            font-weight: bold;
+                            font-size: 2.5rem;
                         }
                     }
 
@@ -1120,6 +1118,7 @@ footer {
         & .interface {
             & .container-cards {
                 padding: 2.5rem 0;
+                gap: 1rem;
                 overflow-x: auto;
                 grid-auto-flow: column;
                 grid-auto-columns: 80%;
@@ -1143,6 +1142,13 @@ footer {
             & .duvidas {
                 text-align: center;
             }
+        }
+    }
+
+    /* Carrossel */
+    #carrossel {
+        & .swiper {
+            height: 25rem;
         }
     }
 
