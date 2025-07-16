@@ -1092,12 +1092,7 @@ footer {
             }
 
             & .cards {
-                flex-direction: column;
-                width: 100%;
-
-                & p {
-                    width: 100%;
-                }
+                display: none;
             }
 
             & nav {
