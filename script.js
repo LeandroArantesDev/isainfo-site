@@ -142,3 +142,13 @@ function toggleMenu() {
     menu.classList.toggle('ativo');
     overlay.classList.toggle('ativo');
 }
+
+// Menu do app
+
+const menu_app = document.getElementById("menu-app");
+const close_menu_app = document.getElementById("close-menu-app");
+
+function toggleMenuApp() {
+    menu_app.classList.toggle('ativo');
+    overlay.classList.toggle('ativo');
+}

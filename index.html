@@ -19,9 +19,22 @@
     <div id="loader-wrapper">
         <div class="loader"></div>
     </div>
+    <div id="menu-app">
+        <div id="container-app">
+            <button type="button" id="close-menu-app" onclick="toggleMenuApp()"><i
+                    class="fa-regular fa-circle-xmark"></i></button>
+            <p>Clique abaixo para baixar nosso app!</p>
+            <nav id="links">
+                <a href="#"><i class="fa-brands fa-google-play"></i></a>
+                <a href="#"><i class="fa-brands fa-apple"></i></a>
+            </nav>
+        </div>
+        <div id="overlay-app" onclick="toggleMenuApp()"></div>
+    </div>
+
     <header>
         <div class="interface">
-            <a href="/">
+            <a href="#">
                 <img src="img/logo.png" alt="Logo da marca">
             </a>
             <nav id="menu">
@@ -30,7 +43,7 @@
                 <a href="#planos" onclick="toggleMenu()"><i class="fa-solid fa-money-bill"></i> Planos</a>
                 <a href="#vantagens" onclick="toggleMenu()"><i class="fa-solid fa-star"></i> Vantagens</a>
                 <a href="#contato" onclick="toggleMenu()"><i class="fa-solid fa-envelope"></i> Contato</a>
-                <button id="app" class="mobile" onclick="toggleMenu(), alert('Em breve!')">
+                <button id="app" class="mobile" onclick="toggleMenu(), toggleMenuApp()">
                     <i class="fa-solid fa-download"></i>Baixar App
                 </button>
                 <a href="https://isainfo.assinante.net/auth/login" id="boleto" class="mobile" onclick="toggleMenu()"
@@ -39,7 +52,7 @@
                 </a>
             </nav>
             <nav class="btn-container">
-                <button id="app" onclick="toggleMenu(), alert('Em breve!')">
+                <button id="app" onclick="toggleMenu(), toggleMenuApp()">
                     <i class="fa-solid fa-download"></i>Baixar App
                 </button>
                 <a href="https://isainfo.assinante.net/auth/login" id="boleto" onclick="toggleMenu()" target="_blank">
@@ -74,13 +87,12 @@
         </section>
         <section id="planos">
             <div class="interface">
-                <h2 class="titulo">Escolha o plano ideal para você</h2>
-                <p class="subtitulo">Temos opções para todos os perfis e necessidades. Todos os planos incluem
-                    instalação gratuita e sem
+                <h2 class="titulo">Escolha o plano ideal para você ou sua empresa</h2>
+                <p class="subtitulo">Temos opções para todos os perfis e necessidades. Todos os planos são sem
                     fidelidade.
                 </p>
                 <div class="container-cards">
-                    <article>
+                    <article id="start">
                         <div class="txt-preco">
                             <p class="plano"><span id="start">Start</span></p>
                             <p class="preco">R$ 50,00<span>/mês</span></p>
@@ -119,7 +131,7 @@
                                 target="_blank">Assinar Agora</a>
                         </div>
                     </article>
-                    <article>
+                    <article id="ultra">
                         <div class="txt-preco">
                             <p class="plano"><span id="ultra">Ultra</span></p>
                             <p class="preco">R$ 100,00<span>/mês</span></p>
@@ -142,7 +154,7 @@
                     </article>
                 </div>
                 <p class="duvidas">Tem dúvidas sobre qual plano escolher? Fale conosco!</p>
-                <a href="https://wa.me/5516991325096?text=Bom%20dia!%20Vi%20os%20planos%20de%20internet%20e%20gostaria%20de%20conversar%20com%20um%20atendente%20para%20tirar%20algumas%20dúvidas."
+                <a href="https://wa.me/5516991325096?text=Olá!%20Vi%20os%20planos%20de%20internet%20e%20gostaria%20de%20conversar%20com%20um%20atendente%20para%20tirar%20algumas%20dúvidas."
                     target="_blank" class="btn-falar">Falar com especialista</a>
             </div>
         </section>
