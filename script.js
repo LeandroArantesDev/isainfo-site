@@ -105,10 +105,10 @@ const swiper = new Swiper('.swiper', {
 
 document.addEventListener('DOMContentLoaded', () => {
     const imagens = [
-        'img/img-hero.jpg',
-        'img/slide1.jpg',
-        'img/slide2.jpg',
-        'img/slide3.jpg',
+        'img/imagem1.jpg',
+        'img/imagem2.jpg',
+        'img/imagem3.jpg',
+        'img/imagem4.jpg',
     ];
 
     let indice = 0;
